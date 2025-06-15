@@ -1,0 +1,41 @@
+#container {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--spectrum-global-color-gray-50);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#box {
+  padding: 2rem;
+  border: 1px solid #444;
+  width: 360px;
+}
+
+#heading {
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+#numberEntry {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+
+#result {
+  color: green;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-top: 1rem;
+  text-align: left;
+}
+
+#error {
+  color: red;
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+}

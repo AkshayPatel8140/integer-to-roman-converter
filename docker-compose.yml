@@ -1,0 +1,14 @@
+version: '0.1'
+
+services:
+  backend:
+    build: ./backend
+    ports:
+      - "8080:8080"
+    restart: always
+
+  frontend:
+    build: ./Frontend/adobe-task-frontend
+    ports:
+      - "3000:80"
+    restart: always
