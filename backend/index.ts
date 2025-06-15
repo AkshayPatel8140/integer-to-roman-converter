@@ -1,3 +1,4 @@
+import './src/tracing';
 import app from './src/routes';
 import logger from './src/logger';
 

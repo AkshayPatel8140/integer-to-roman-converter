@@ -31,6 +31,12 @@ describe('API Endpoints', () => {
         expect(res.text).toMatch(/Invalid query parameter/);
     });
 
+    it('returns 400 for number below 1', async () => {
+        const res = await request(app).get('/romannumeral?query=0');
+        expect(res.status).toBe(400);
+        expect(res.text).toMatch(/Invalid query parameter Please provide a number between 1 and 3999./);
+    });
+
     it('GET /romannumeral with out-of-range number, should return 400 error', async () => {
         const res = await request(app).get('/romannumeral?query=4000');
         expect(res.status).toBe(400);
