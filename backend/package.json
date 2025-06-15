@@ -1,0 +1,33 @@
+{
+  "name": "adobe-task-backend",
+  "version": "1.0.0",
+  "description": "This the backend project that will have the service of creating the Roman number from the given Integer number.",
+  "main": "index.ts",
+  "scripts": {
+    "test": "jest",
+    "test:coverage": "jest --coverage",
+    "start": "ts-node index.ts"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@opentelemetry/api": "^1.9.0",
+    "@opentelemetry/sdk-node": "^0.202.0",
+    "@types/express": "^5.0.3",
+    "@types/node": "^24.0.1",
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "prom-client": "^15.1.3",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.8.3",
+    "winston": "^3.17.0"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/jest": "^29.5.14",
+    "@types/supertest": "^6.0.3",
+    "jest": "^30.0.0",
+    "supertest": "^7.1.1",
+    "ts-jest": "^29.4.0"
+  }
+}
