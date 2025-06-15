@@ -19,7 +19,7 @@ services:
       - "14268:14268"
 
   frontend:
-    build: ./Frontend/adobe-task-frontend
+    build: ./frontend/adobe-task-frontend
     container_name: "adobe-task-frontend"
     ports:
       - "3000:80"

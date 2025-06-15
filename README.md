@@ -75,22 +75,22 @@ npm start
 ## Project Structure
 ```
 .
-├── backend/               # Node.js API
-│   ├── src/               # Source files (Express, logger, tracing, routes)
-│   ├── logs/              # Winston log output
-│   ├── __test__/          # Jest test files
-│   └── Dockerfile         # Docker setup for backend
-├── Frontend/
-│   ├── adobe-task-frontend/      # React app with Adobe Spectrum UI
-│   │   ├── src/                  # Source files (index, app, app.test, app.css)
-│   │   └── Dockerfile            # Docker setup for Frontend
-├── docker-compose.yml     # Docker setup for full stack
+├── backend/                  # Node.js API
+│   ├── src/                  # Source files (Express, logger, tracing, routes)
+│   ├── logs/                 # Winston log output
+│   ├── __test__/             # Jest test files
+│   └── Dockerfile            # Docker setup for backend
+├── frontend/
+│   ├── adobe-task-frontend/  # React app with Adobe Spectrum UI
+│   │   ├── src/              # Source files (index, app, app.test, app.css)
+│   │   └── Dockerfile        # Docker setup for Frontend
+├── docker-compose.yml        # Docker setup for full stack
 ```
 
 ## Testing
 
 To run tests with coverage:
 ```bash
-cd Frontend/adobe-task-frontend
+cd frontend/adobe-task-frontend
 npm run test     
 ```
