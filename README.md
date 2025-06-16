@@ -92,5 +92,5 @@ npm start
 To run tests with coverage:
 ```bash
 cd frontend/adobe-task-frontend
-npm run test     
+npm run test:coverage     
 ```
