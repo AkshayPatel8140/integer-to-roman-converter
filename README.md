@@ -11,6 +11,21 @@ This project is a Roman numeral converter. It includes:
 - Metrics exposed at `http://localhost:8080/metrics` using Prometheus format
 - Tracing via OpenTelemetry + Jaeger (`http://localhost:16686`)
 
+## Project Structure
+```
+.
+├── backend/                  # Node.js API
+│   ├── src/                  # Source files (Express, logger, tracing, routes)
+│   ├── logs/                 # Winston log output
+│   ├── __test__/             # Jest test files
+│   └── Dockerfile            # Docker setup for backend
+├── frontend/
+│   ├── adobe-task-frontend/  # React app with Adobe Spectrum UI
+│   │   ├── src/              # Source files (index, app, app.test, app.css)
+│   │   └── Dockerfile        # Docker setup for Frontend
+├── docker-compose.yml        # Docker setup for full stack
+└── Report.pdf                # Project Report file
+```
 
 ## Running with Docker
 ```bash
@@ -37,7 +52,7 @@ Success Response:
   ```
 Error Response:
   ```json
-  { "input": "abc", "output": "", "message": "Invalid query parameter. Please provide a number between 1 and 3999." }
+  {"message": "Invalid query parameter. Please provide a number between 1 and 3999." }
   ```
 
 If running locally without Docker:
@@ -45,13 +60,6 @@ If running locally without Docker:
 cd backend
 npm install
 npm start
-```
-
-## Testing
-To run tests with coverage:
-```bash
-cd backend
-npm run test:coverage
 ```
 
 ## Frontend
@@ -72,25 +80,14 @@ npm start
 - Converts and displays Roman numeral results
 - Handles and displays error responses
 
-## Project Structure
-```
-.
-├── backend/                  # Node.js API
-│   ├── src/                  # Source files (Express, logger, tracing, routes)
-│   ├── logs/                 # Winston log output
-│   ├── __test__/             # Jest test files
-│   └── Dockerfile            # Docker setup for backend
-├── frontend/
-│   ├── adobe-task-frontend/  # React app with Adobe Spectrum UI
-│   │   ├── src/              # Source files (index, app, app.test, app.css)
-│   │   └── Dockerfile        # Docker setup for Frontend
-├── docker-compose.yml        # Docker setup for full stack
-```
-
 ## Testing
 
 To run tests with coverage:
 ```bash
 cd frontend/adobe-task-frontend
 npm run test:coverage     
+```
+```bash
+cd backend
+npm run test:coverage
 ```
