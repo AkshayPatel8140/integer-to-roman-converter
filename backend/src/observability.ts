@@ -1,7 +1,6 @@
 import { Request, Response, NextFunction } from "express";
 import client from 'prom-client';
 
-client.collectDefaultMetrics();
 
 // It use to track the number of requests.
 const counter = new client.Counter({
@@ -14,6 +13,8 @@ const errorCounter = new client.Counter({
     name: "requests_errors_total",
     help: "Total number of failed requests"
 });
+
+client.collectDefaultMetrics();
 
 // This middleware increments the request counter for each incoming request
 const middlewareMetrics = (_req: Request, res: Response, next: NextFunction) => {

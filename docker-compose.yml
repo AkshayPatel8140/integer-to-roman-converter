@@ -6,17 +6,9 @@ services:
     container_name: "adobe-task-backend"
     ports:
       - "8080:8080"
-    depends_on:
-      - jaeger
     restart: always
     volumes:
       - ./backend/logs:/backend/logs
-
-  jaeger:
-    image: jaegertracing/all-in-one:1.45
-    ports:
-      - "16686:16686"
-      - "14268:14268"
 
   frontend:
     build: ./frontend/adobe-task-frontend
